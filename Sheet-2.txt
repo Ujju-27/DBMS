@@ -1,0 +1,36 @@
+1
+SQL> connect 
+Enter user-name: CSJ16
+Enter password: 
+Connected.
+
+2
+SQL> select * from Tab;
+
+TNAME			       TABTYPE	CLUSTERID
+------------------------------ ------- ----------
+DUPLICATE		       TABLE
+
+3
+SQL> show user 
+USER is "CSJ16"
+
+4
+SQL> create table Employee(empcode number, name varchar2(6),salary number);
+
+Table created.
+
+5
+SQL> desc Employee
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPCODE					    NUMBER
+ NAME						    VARCHAR2(6)
+ SALARY 					    NUMBER
+
+6
+SQL> select * from Employee;
+
+no rows selected
+
+7
