@@ -146,27 +146,25 @@ i20
 7 rows selected.
 
 7
-SQL> create table vehicle as select * from car where 1=0;
+SQL> Create table vehicle as select TopSpeed, Doors, CostPrice, ModelName, Company, RPM, EngineCapacity, Color, ModelNo, Weight, SalePrice from car where 1=0;
 
 Table created.
 
 8
-SQL>  set linesize 400;
-SQL> set pagesize 400;
 SQL> desc vehicle;
- Name                                                                  Null?    Type
- --------------------------------------------------------------------------------------------------
- MODELNO                                                                       VARCHAR2(10)
- MODELNAME                                                                     VARCHAR2(10)
- COMPANY                                                              NOT NULL VARCHAR2(17)
- ENGINECAPACITY                                                                VARCHAR2(10)
- COLOR                                                                         VARCHAR2(10)
- DOORS                                                                         NUMBER
- WEIGHT                                                                        NUMBER
- TOPSPEED                                                                      NUMBER
- RPM                                                                           NUMBER
- COSTPRICE                                                                     NUMBER
- SALEPRICE                                                                     NUMBER
+ Name                          Null?          Type
+ ---------------------------------------------------------------------
+ TOPSPEED                                     NUMBER
+ DOORS                                        NUMBER
+ COSTPRICE                                    NUMBER
+ MODELNAME                                    VARCHAR2(10)
+ COMPANY                       NOT NULL       VARCHAR2(17)
+ RPM                                          NUMBER
+ ENGINECAPACITY                               VARCHAR2(10) 
+ COLOR                                        VARCHAR2(10)
+ MODELNO                                      VARCHAR2(10)
+ WEIGHT                                       NUMBER
+ SALEPRICE                                    NUMBER
 
 9
 SQL> insert into vehicle(TopSpeed, Doors, CostPrice,ModelName, Company, RPM, EngineCapacity, Color, ModelNo, Weight,SalePrice)
@@ -178,15 +176,15 @@ SQL> insert into vehicle(TopSpeed, Doors, CostPrice,ModelName, Company, RPM, Eng
 10(1)
 SQL> select * from vehicle;
 
-MODELNO    MODELNAME  COMPANY           ENGINECAPA COLOR           DOORS     WEIGHT   TOPSPEED   RPM     COSTPRICE  SALEPRICE
----------- ---------- ----------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ----------
-VLSI12     Honda City Honda             1250       Grey                4       1100    150       7500     500000     550000
-K10        Alto       Maruti Suzuki     1100       white               4       1100    150       6000     399990     410000
-AY27       Thar       Mahindra          2184       Black               4       1400    220       6500    1500000    2550000
-ZY15       S-Presso   Maruti Suzuki     1300       Yellow              4       1400    140       5300     475000     520000
-YN43       Swift      Maruti Suzuki     1200       Brown               4       1200    160       6000     700000     750000
-ZX71       i20        Hundai            1300       Gray                4       1300    180       5500     900000     950000
-NxEr       Aventador  Lamborghini       2184       Green               4       1950    240       8000   45000000   75000000
+  TOPSPEED      DOORS  COSTPRICE MODELNAME  COMPANY                  RPM ENGINECAPA COLOR      MODELNO            WEIGHT  SALEPRICE
+---------- ---------- ---------- ---------- ----------------- ---------- ---------- ---------- ---------- ---------- ----------
+       150          4     399990 Alto       Maruti Suzuki           6000 1100           white      K10              1100     410000
+       220          4    1500000 Thar       Mahindra                6500 2184           Black      AY27             1400    2550000
+       140          4     475000 S-Presso   Maruti Suzuki           5300 1300           Yellow     ZY15             1400     520000
+       180          4     900000 i20        Hundai                  5500 1300           Gray       ZX71             1300     950000
+       150          4     500000 Honda City Honda                   7500 1250           Grey       VLSI12           1100     550000
+       240          4   45000000 Aventador  Lamborghini             8000 2184           Green      NxEr             1950   75000000
+       160          4     700000 Swift      Maruti Suzuki           6000 1200           Brown      YN43             1200     750000
 
 7 rows selected.
   
@@ -197,14 +195,8 @@ MODELNAME
 ----------
 Alto
 S-Presso
-SwiftSQL> select ModelName from vehicle where Company='Maruti Suzuki';
-
-MODELNAME
-----------
-Alto
-S-Presso
 Swift
-
+ 
 10(2)
 SQL> select * from vehicle where EngineCapacity>2000;
 
