@@ -63,6 +63,7 @@ Link: [SQL](https://github.com/Ujju-27/DBMS/tree/main/Lab3)
 
 ## Practical-04
 Lab4- SQL Queries
+
 Link: [SQL](https://github.com/Ujju-27/DBMS/tree/main/Lab4)
 
 ## Practical-05
