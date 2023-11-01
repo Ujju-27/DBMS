@@ -70,3 +70,8 @@ Link: [SQL](https://github.com/Ujju-27/DBMS/tree/main/Lab4)
 Lab5- SQL Queries
 
 Link: [SQL](https://github.com/Ujju-27/DBMS/tree/main/Lab5)
+
+## Practical-06
+Lab5- SQL Queries
+
+Link: [SQL](https://github.com/Ujju-27/DBMS/tree/main/Lab6)
